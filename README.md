@@ -15,6 +15,11 @@ If you application program involves performing actions based on a lot of events 
 
 Node.js application can be best illustrated as a restaurant. Where, there is only a single waiter who is super efficient to serve every tables fastly and passes instructions to the Chef at kitchen swiftly. Chef is the callstack which actually performs CPU intesive operations.
 
+- Node.js is best for implementing microservice architecture. 
+
+Because you can use node modules to break down programs into smaller chunks and each peice of application can interact easily based on event driven model.
+
+
 #### Node.js core modules  
 - `globals`
   - `__filename`
