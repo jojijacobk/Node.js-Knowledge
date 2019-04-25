@@ -6,7 +6,9 @@
 (function(exports,require,module,__filename,__dirname){
 })
 ```
-#### Node.js modules  
+- All Node.js APIs are designed to work asynchronously. In Node.js asynchrony is facilitated using callbacks. So every Node.js APIs support callback.
+
+#### Node.js core modules  
 - `globals`
   - `__filename`
   - `__dirname`
