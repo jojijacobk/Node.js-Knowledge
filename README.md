@@ -6,7 +6,7 @@
 (function(exports,require,module,__filename,__dirname){
 })
 ```
-- All Node.js APIs are designed to work asynchronously. In Node.js asynchrony is facilitated using callbacks. So every Node.js APIs support callback.
+- All Node.js APIs are designed to work asynchronously. In Node.js asynchrony is facilitated using callbacks. So every Node.js I/O APIs support callback. And, they also do have synchronous counterparts that has `Sync` in method name.
 
 ### Advantages of Node.js
 - It is used for asynchrounous, event driven, non blocking, I/O bound, single process-single threaded programming.
