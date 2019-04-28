@@ -19,8 +19,12 @@ Node.js application can be best illustrated as a restaurant. Where, there is onl
 
 Because you can use node modules to break down programs into smaller chunks and each peice of application can interact easily based on event driven model.
 
-### Advantages of Node.js
+### Disadvantages of Node.js
 - CPU intensive applications such as processing heavy graphics, crunching numbers of pi etc isn't advisable to be implemented using Node.js because it would essentially block the only available process. Also, Node.js has only one process against other programming languages which could use multi-process multi-threaded execution. 
+
+### How to avoid blocking in Node.js ?
+- Yield a big synchronous callback or program into smaller, quick asynchronous callbacks.
+- Fork child processes to avoid using event loop for big tasks
 
 #### Node.js core modules  
 - `globals`
