@@ -67,3 +67,9 @@ Because you can use node modules to break down programs into smaller chunks and 
   - `fs.createReadStream`
   - `fs.createWriteStream`
 
+### Testing
+- In Node.js, you can test source codes by installing mocha & chai. And, to do testing of values, you could use either `assert`, `should` or `expect`.
+- `describe` is used to write the suite of tests. You can nest `describe` as needed.
+- `it` is used to define each tests.
+- `it` can be used to implement `asynchronous` testing by passing a value (for eg: _done_) into the callback of `it`.
+- In cases such as testing a website result, you don't need to bother about testing result from the actual URL. Instead you can mock it using `Nock`.
