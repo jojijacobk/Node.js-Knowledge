@@ -73,3 +73,9 @@ Because you can use node modules to break down programs into smaller chunks and 
 - `it` is used to define each tests.
 - `it` can be used to implement `asynchronous` testing by passing a value (for eg: _done_) into the callback of `it`.
 - In cases such as testing a website result, you don't need to bother about testing result from the actual URL. Instead you can mock it using `Nock`.
+
+### Debug
+- `node --inspect-brk ./node_modules/.bin/gulp css`
+
+# Reference
+- https://stackoverflow.com/questions/40033298/how-to-debug-a-gulp-task
