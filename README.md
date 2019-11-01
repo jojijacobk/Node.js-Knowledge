@@ -1,3 +1,36 @@
+## NPM
+**semantic versioning**
+
+npm packages follow semver (semantic versioning). Based on the version scheme of each installed npm packages as found in package.json file, when you run `npm update` the behavior varies as follows:
+- `~` - means only patch versions (3rd position of semver) are going to be updated.
+- `^` - means both patch versions and minor versions (2nd and 3rd position of semver) are going to be updated.
+
+npm update will update all the packages and dependencies in the package respective of their semver schemes, and update this information in the `package-lock.json` file. Whereas, `package.json` file is untouched. So you can test the software with updated packages and if anything goes wrong, revert back to `package.json` version of software.
+
+**check package versions**
+
+- `npm list` : Lists the **installed versions** of all dependencies in this software
+- `npm list -g --depth 0` : Lists the **installed versions** of all globally installed packages
+- `npm view` : Lists the **latest versions** of all dependencies in this software
+- `npm outdated` : Lists only the dependencies in this software which are outdated
+
+**install package**
+
+Though it is useful to have some executables installed globally, in general all npm packages are recommended to be installed locally in your project directory.
+
+- `npm install <package> --save` : Install the <package> and add it as **dependencies** in package.json file.
+- `npm install <package> --save-dev` : Install the <package> and add it as **devDependencies** in package.json file.
+- `npm install` : Install all the dependency & devDependency packages
+- `npm install --production` : Install only dependency packages
+
+**npx**
+
+- `npx create-react-app my-app` is equivalent to `npm install create-react-app` & `create-react-app my-app`. With npx you can avoid the need to have the package installed before invoking its executable.
+- `npx node@10 -v` : With npx you can pick a version of package (or even node) to run a command. This avoids the need to use nvm for node version management.
+- `npx <Github gist url>` : It executes the piece of code present in a URL
+
+## Node.js
+
 - Like `window` is the global object in browser environment, `global` is the global object of Node.js environment. So, `console.log()` can be also written as `global.console.log()`.
 - Each js file is a module. And, you have to export variables, functions, objects into global scope if you need to access it from another module or from global space.
 - Every .js page in Node.js project is like a module. Invisibly behind the scenes each .js page is wrapped by a wrapper function which looks like:
@@ -25,6 +58,16 @@ Because you can use node modules to break down programs into smaller chunks and 
 ### How to avoid blocking in Node.js ?
 - Yield a big synchronous callback or program into smaller, quick asynchronous callbacks.
 - Fork child processes to avoid using event loop for big tasks
+
+### Event Loop
+- The event loop in node.js environment is similar to that of JavaScript in browser environment. 
+- ES6 has introduced **job queue**, the tasks in which shall get executed before the beginning of next round of event loop. That means when you have a code with `setTimeout` and then a code for `promise` within a function, the promise will get executed before the function passed into setTimeout. This is because promise API works in `job queue` level whereas the latter works in the `message queue`. 
+- The `process.nextTick()` of node.js is similar to the `job queue` of JavaScript in browser.
+- Node.js `setImmediate` is very similar to setTimeout with 0ms timeout `setTimeout(fn,0)`
+- When current `call stack` is finished,
+  - then `process.nextTick(fn)` is executed
+  - then `setImmediate(fn)` is executed
+  - then `setTimeout(fn,0)` is executed
 
 #### Node.js core modules  
 - `globals`
