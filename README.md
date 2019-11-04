@@ -1,5 +1,5 @@
 ## NPM
-**semantic versioning**
+**npm semantic version rules**
 
 npm packages follow semver (semantic versioning). Based on the version scheme of each installed npm packages as found in package.json file, when you run `npm update` the behavior varies as follows:
 - `~` - means only patch versions (3rd position of semver) are going to be updated.
