@@ -22,6 +22,10 @@ Though it is useful to have some executables installed globally, in general all 
 - `npm install <package> --save-dev` : Install the <package> and add it as **devDependencies** in package.json file.
 - `npm install` : Install all the dependency & devDependency packages
 - `npm install --production` : Install only dependency packages
+  
+**install path**
+
+- `npm root -g` : Shows global path where Node modules are installed
 
 **npx**
 
