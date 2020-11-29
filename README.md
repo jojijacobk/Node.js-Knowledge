@@ -59,7 +59,7 @@ Yarn is better than npm in the following aspects:
   - `yarn config get <key>`
   - `yarn config delete <key>`
   
-  examples:
+  example:
   - `yarn config set init-author-name "Joji Jacob" -g`
   - `yarn config set init-author-email "joji.jacob.k@gmail.com" -g`
   - `yarn config set init-author-url "https://jojijacob.me" -g`
@@ -67,15 +67,20 @@ Yarn is better than npm in the following aspects:
 - `yarn init` - similar to `npm init`, just initializes package.json
 - `yarn install` - installs the dependencies from `yarn.lock` file or `package.json`
 - `yarn add <package>` - adds a package to dependency
+- `yarn global add <package>` - adds a package globally adn mention it as a dependency
 - `yarn add --dev <package>` - adds a package to dev dependency
 - `yarn remove <package>` - removes specified package from dependencies
 - `yarn upgrade <package>` 
 - `yarn upgrade interactive <package>`
 - `yarn info <package>` - gives whole information about a <package>.
 - `yarn info <package> <field>` - gives <field> information about that <package>. eg: `yarn info cowsay time`
+- `yarn run <binary>` - is similar to `npm run <binary>`
 - `yarn licenses list` - gives a pretty quick concise overview of licenses of all dependencies
 - `yarn licenses generate-disclaimer` - concatenates all the licenses information
 - `yarn why <package>` - gives an idea about why a certin package is installed, and shows hierarchy of dependencies that resulted in the installation of this <package >.
+- `yarn create <starter-kit> <args>`
+  example:
+    - `yarn create react-app myapp` is equivalent to `npx create-react-app myapp`
 
 
 ## Node.js
