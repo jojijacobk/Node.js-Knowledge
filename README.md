@@ -40,6 +40,28 @@ Though it is useful to have some executables installed globally, in general all 
 - `npx create-react-app my-app` is equivalent to `npm install create-react-app` & `create-react-app my-app`. With npx you can avoid the need to have the package installed before invoking its executable.
 - `npx node@10 -v` : With npx you can pick a version of package (or even node) to run a command. This avoids the need to use nvm for node version management.
 - `npx <Github gist url>` : It executes the piece of code present in a URL
+  
+## Yarn
+
+Yarn is better than npm in the following aspects:
+
+- Significantly faster than npm
+- Has parallel download of dependencies
+- Maintains a central cache for all the dependencies, making it faster to start a new project or work offline
+- Deterministic in nature as compared to npm, so it gives the exact same software when build from any machines. npm installs on the other hand could potentially give a different version of software on each run unless you explicitly use shrinkwrap (also, shrinkwrap works only on parent folder)
+
+**commands**
+
+- `yarn install` - installs the dependencies from `yarn.lock` file or `package.json`
+- `yarn add <package>` - adds a package to dependency
+- `yarn add --dev <package>` - adds a package to dev dependency
+- `yarn remove <package>` - removes specified package from dependencies
+- `yarn upgrade <package>` 
+- `yarn upgrade interactive <package>`
+- `yarn licenses list` - gives a pretty quick concise overview of licenses of all dependencies
+- `yarn licenses generate-disclaimer` - concatenates all the licenses information
+- `yarn why <package>` - gives an idea about why a certin package is installed, and shows hierarchy of dependencies that resulted in the installation of this <package >.
+
 
 ## Node.js
 
