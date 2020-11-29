@@ -47,17 +47,32 @@ Yarn is better than npm in the following aspects:
 
 - Significantly faster than npm
 - Has parallel download of dependencies
-- Maintains a central cache for all the dependencies, making it faster to start a new project or work offline
+- Maintains a central cache for all the dependencies, making it faster to start a new project or work offline. To see that cache run `yarn cache list`.
 - Deterministic in nature as compared to npm, so it gives the exact same software when build from any machines. npm installs on the other hand could potentially give a different version of software on each run unless you explicitly use shrinkwrap (also, shrinkwrap works only on parent folder)
 
 **commands**
 
+- config
+  - `yarn config list`
+  - `yarn config set <key> <value>`
+  - `yarn config set <key> <value> -g`
+  - `yarn config get <key>`
+  - `yarn config delete <key>`
+  
+  examples:
+  - `yarn config set init-author-name "Joji Jacob" -g`
+  - `yarn config set init-author-email "joji.jacob.k@gmail.com" -g`
+  - `yarn config set init-author-url "https://jojijacob.me" -g`
+
+- `yarn init` - similar to `npm init`, just initializes package.json
 - `yarn install` - installs the dependencies from `yarn.lock` file or `package.json`
 - `yarn add <package>` - adds a package to dependency
 - `yarn add --dev <package>` - adds a package to dev dependency
 - `yarn remove <package>` - removes specified package from dependencies
 - `yarn upgrade <package>` 
 - `yarn upgrade interactive <package>`
+- `yarn info <package>` - gives whole information about a <package>.
+- `yarn info <package> <field>` - gives <field> information about that <package>. eg: `yarn info cowsay time`
 - `yarn licenses list` - gives a pretty quick concise overview of licenses of all dependencies
 - `yarn licenses generate-disclaimer` - concatenates all the licenses information
 - `yarn why <package>` - gives an idea about why a certin package is installed, and shows hierarchy of dependencies that resulted in the installation of this <package >.
