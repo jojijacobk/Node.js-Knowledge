@@ -27,11 +27,13 @@ Though it is useful to have some executables installed globally, in general all 
 
 - `npm root -g` : Shows global path where Node modules are installed
 
-**npx**
+## npx
 
-`npm` is for Managing (M stands for manage) modules, whereas
+- `npm` is for Managing (M stands for manage) modules, whereas `npx` is for Executing (X stands for execute) binaries.
+- `npx` is installed automatically along with `npm`.
+- `npx` searches at first for a package in the package.json file in current directory, then global path, if not found it installs the package and keeps in npm cache. To find npm cache directory check `npm config get cache`.
 
-`npx` is for Executing (X stands for execute) binaries which comes from npm install. `npx` is installed automatically along with `npm`.
+**commands**
 
 - `npx <name>` : It runs a binary executable with name `<name>`. The executable should be found in `node_modules/bin` either in the current directory or global root node path. If <name> is not found, npx searches it on npm.
 - `npx create-react-app my-app` is equivalent to `npm install create-react-app` & `create-react-app my-app`. With npx you can avoid the need to have the package installed before invoking its executable.
