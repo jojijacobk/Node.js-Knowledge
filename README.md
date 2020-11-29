@@ -48,7 +48,7 @@ Yarn is better than npm in the following aspects:
 - Significantly faster than npm
 - Has parallel download of dependencies
 - Maintains a central cache for all the dependencies, making it faster to start a new project or work offline. To see that cache run `yarn cache list`.
-- Deterministic in nature as compared to npm, so it gives the exact same software when build from any machines. npm installs on the other hand could potentially give a different version of software on each run unless you explicitly use shrinkwrap (also, shrinkwrap works only on parent folder)
+- Deterministic in nature as compared to npm, so it gives the exact same software when build from any machines. npm installs on the other hand could potentially give a different version of software on each run unless you explicitly use package-lock.json or shrinkwrap (also, shrinkwrap works only on parent folder)
 
 **commands**
 
