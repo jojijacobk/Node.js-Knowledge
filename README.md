@@ -32,6 +32,7 @@ Though it is useful to have some executables installed globally, in general all 
 - `npm` is for Managing (M stands for manage) modules, whereas `npx` is for Executing (X stands for execute) binaries.
 - `npx` is installed automatically along with `npm`.
 - `npx` searches at first for a package in the package.json file in current directory, then global path, if not found it installs the package and keeps in npm cache. To find npm cache directory check `npm config get cache`.
+- `npx` can be used like a playground tool where you can try any npm packages without actually ever installing it. For example try this : `npx devpun | npx cowsay | npx lolcatjs`. Here, none of the packages are installed in local or global, but temporarily installed in npm cache, and executes the commands. All of this installation and execution happens in one go.
 
 **commands**
 
