@@ -19,6 +19,7 @@ npm update will update all the packages and dependencies in the package respecti
 Though it is useful to have some executables installed globally, in general all npm packages are recommended to be installed locally in your project directory.
 
 - `npm install <package> --save` : Install the <package> and add it as **dependencies** in package.json file.
+- `npm uninstall <package> --save` : Uninstall the <package> and remove it from **dependencies** in package.json file.
 - `npm install <package> --save-dev` : Install the <package> and add it as **devDependencies** in package.json file.
 - `npm install` : Install all the dependency & devDependency packages
 - `npm install --production` : Install only dependency packages
