@@ -36,10 +36,9 @@ Though it is useful to have some executables installed globally, in general all 
 - `npx` searches at first for a package in the package.json file in current directory, then global path, if not found it installs the package and keeps in npm cache. To find npm cache directory check `npm config get cache`.
 - `npx` can be used like a playground tool where you can try any npm packages without actually ever installing it. For example try this : `npx devpun | npx cowsay | npx lolcatjs`. Here, none of the packages are installed in local or global, but temporarily installed in npm cache, and executes the commands. All of this installation and execution happens in one go.
 - `npx` helps to execute two different versions of software not really by installing both. 
-
-example:
-  - `npx node@10 -v #v10.18.1`
-  - `npx node@12 -v #v12.14.1`
+  example:
+    - `npx node@10 -v #v10.18.1`
+    - `npx node@12 -v #v12.14.1`
 
 **commands**
 
