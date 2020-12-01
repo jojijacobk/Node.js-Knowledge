@@ -127,6 +127,7 @@ Because you can use node modules to break down programs into smaller chunks and 
 - Node.js `setImmediate` is very similar to setTimeout with 0ms timeout `setTimeout(fn,0)`
 - When current `call stack` is finished,
   - then `process.nextTick(fn)` is executed
+  - then `promise` is executed
   - then `setImmediate(fn)` is executed
   - then `setTimeout(fn,0)` is executed
   
