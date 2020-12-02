@@ -22,12 +22,73 @@ Though it is useful to have some executables installed globally, in general all 
 - `npm install <package> --save-dev` : Install the <package> and add it as **devDependencies** in package.json file.
 - `npm install` : Install all the dependency & devDependency packages
 - `npm install --production` : Install only dependency packages
+- `npm uninstall <package> --save` : Uninstall the <package> and remove it from **dependencies** in package.json file.
+- `npm uninstall <package> --save-dev` : Uninstall the <package> and remove it from **devDependencies** in package.json file.
+  
+**install path**
 
-**npx**
+- `npm root -g` : Shows global path where Node modules are installed
 
+## npx
+
+- `npm` is for Managing (M stands for manage) modules, whereas `npx` is for Executing (X stands for execute) binaries.
+- `npx` is installed automatically along with `npm`.
+- `npx` searches at first for a package in the package.json file in current directory, then global path, if not found it installs the package and keeps in npm cache. To find npm cache directory check `npm config get cache`.
+- `npx` can be used like a playground tool where you can try any npm packages without actually ever installing it. For example try this : `npx devpun | npx cowsay | npx lolcatjs`. Here, none of the packages are installed in local or global, but temporarily installed in npm cache, and executes the commands. All of this installation and execution happens in one go.
+- `npx` helps to execute two different versions of software not really by installing both. 
+
+  example:
+    - `npx node@10 -v #v10.18.1`
+    - `npx node@12 -v #v12.14.1`
+
+**commands**
+
+- `npx <name>` : It runs a binary executable with name `<name>`. The executable should be found in `node_modules/bin` either in the current directory or global root node path. If <name> is not found, npx searches it on npm.
 - `npx create-react-app my-app` is equivalent to `npm install create-react-app` & `create-react-app my-app`. With npx you can avoid the need to have the package installed before invoking its executable.
 - `npx node@10 -v` : With npx you can pick a version of package (or even node) to run a command. This avoids the need to use nvm for node version management.
 - `npx <Github gist url>` : It executes the piece of code present in a URL
+  
+## Yarn
+
+Yarn is better than npm in the following aspects:
+
+- Significantly faster than npm
+- Has parallel download of dependencies
+- Maintains a central cache for all the dependencies, making it faster to start a new project or work offline. To see that cache run `yarn cache list`.
+- Deterministic in nature as compared to npm, so it gives the exact same software when build from any machines. npm installs on the other hand could potentially give a different version of software on each run unless you explicitly use package-lock.json or shrinkwrap (also, shrinkwrap works only on parent folder)
+
+**commands**
+
+- config
+  - `yarn config list`
+  - `yarn config set <key> <value>`
+  - `yarn config set <key> <value> -g`
+  - `yarn config get <key>`
+  - `yarn config delete <key>`
+  
+  example:
+  - `yarn config set init-author-name "Joji Jacob" -g`
+  - `yarn config set init-author-email "joji.jacob.k@gmail.com" -g`
+  - `yarn config set init-author-url "https://jojijacob.me" -g`
+
+- `yarn init` - similar to `npm init`, just initializes package.json
+- `yarn install` - installs the dependencies from `yarn.lock` file or `package.json`
+- `yarn add <package>` - adds a package to dependency
+- `yarn global add <package>` - adds a package globally adn mention it as a dependency
+- `yarn add --dev <package>` - adds a package to dev dependency
+- `yarn remove <package>` - removes specified package from dependencies
+- `yarn upgrade <package>` 
+- `yarn upgrade interactive <package>`
+- `yarn info <package>` - gives whole information about a <package>.
+- `yarn info <package> <field>` - gives <field> information about that <package>. eg: `yarn info cowsay time`
+- `yarn run <binary>` - is similar to `npm run <binary>`
+- `yarn licenses list` - gives a pretty quick concise overview of licenses of all dependencies
+- `yarn licenses generate-disclaimer` - concatenates all the licenses information
+- `yarn why <package>` - gives an idea about why a certin package is installed, and shows hierarchy of dependencies that resulted in the installation of this <package >.
+- `yarn create <starter-kit> <args>`
+  example:
+    - `yarn create react-app myapp` is equivalent to `npx create-react-app myapp`
+
 
 ## Node.js
 
@@ -66,6 +127,7 @@ Because you can use node modules to break down programs into smaller chunks and 
 - Node.js `setImmediate` is very similar to setTimeout with 0ms timeout `setTimeout(fn,0)`
 - When current `call stack` is finished,
   - then `process.nextTick(fn)` is executed
+  - then `promise` is executed
   - then `setImmediate(fn)` is executed
   - then `setTimeout(fn,0)` is executed
   
