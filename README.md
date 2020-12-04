@@ -89,6 +89,7 @@ Yarn is better than npm in the following aspects:
   example:
     - `yarn create react-app myapp` is equivalent to `npx create-react-app myapp`
 
+- `yarn global bin` gives global installation path of yarn
 
 ## Node.js
 
