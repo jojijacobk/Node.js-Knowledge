@@ -1,4 +1,4 @@
-## NPM
+## npm
 **npm semantic version rules**
 
 npm packages follow semver (semantic versioning). Based on the version scheme of each installed npm packages as found in package.json file, when you run `npm update` the behavior varies as follows:
@@ -48,7 +48,7 @@ Though it is useful to have some executables installed globally, in general all 
 - `npx node@10 -v` : With npx you can pick a version of package (or even node) to run a command. This avoids the need to use nvm for node version management.
 - `npx <Github gist url>` : It executes the piece of code present in a URL
   
-## Yarn
+## yarn
 
 Yarn is better than npm in the following aspects:
 
@@ -183,5 +183,6 @@ Because you can use node modules to break down programs into smaller chunks and 
 ### Debug
 - `node --inspect-brk ./node_modules/.bin/gulp css`
 
-# Reference
+  **Reference**
+  
 - https://stackoverflow.com/questions/40033298/how-to-debug-a-gulp-task
