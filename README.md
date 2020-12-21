@@ -184,5 +184,4 @@ Because you can use node modules to break down programs into smaller chunks and 
 - `node --inspect-brk ./node_modules/.bin/gulp css`
 
   **Reference**
-  
-- https://stackoverflow.com/questions/40033298/how-to-debug-a-gulp-task
+  - https://stackoverflow.com/questions/40033298/how-to-debug-a-gulp-task
