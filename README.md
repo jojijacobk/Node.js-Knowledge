@@ -1,4 +1,7 @@
+[toc]
+
 ## npm
+
 **npm semantic version rules**
 
 npm packages follow semver (semantic versioning). Based on the version scheme of each installed npm packages as found in package.json file, when you run `npm update` the behavior varies as follows:
@@ -25,6 +28,7 @@ Though it is useful to have some executables installed globally, in general all 
 - `npm uninstall <package> --save` : Uninstall the <package> and remove it from **dependencies** in package.json file.
 - `npm uninstall <package> --save-dev` : Uninstall the <package> and remove it from **devDependencies** in package.json file.
   
+
 **install path**
 
 - `npm root -g` : Shows global path where Node modules are installed
@@ -87,11 +91,12 @@ Yarn is better than npm in the following aspects:
 - `yarn why <package>` - gives an idea about why a certin package is installed, and shows hierarchy of dependencies that resulted in the installation of this <package >.
 - `yarn create <starter-kit> <args>`
   example:
-    - `yarn create react-app myapp` is equivalent to `npx create-react-app myapp`
-
+  
+  - `yarn create react-app myapp` is equivalent to `npx create-react-app myapp`
+  
 - `yarn global bin` gives global installation path of yarn
 
-## Node.js
+## node.js
 
 - Like `window` is the global object in browser environment, `global` is the global object of Node.js environment. So, `console.log()` can be also written as `global.console.log()`.
 - Each js file is a module. And, you have to export variables, functions, objects into global scope if you need to access it from another module or from global space.
@@ -132,47 +137,6 @@ Because you can use node modules to break down programs into smaller chunks and 
   - then `setImmediate(fn)` is executed
   - then `setTimeout(fn,0)` is executed
   
-### Node.js core modules  
-- `globals`
-  - `__filename`
-  - `__dirname`
-  - `process`
-    - `process.argv`
-    - `process.stdin.on`
-    - `process.stdout.write`
-    - `process.exit`
-  - `module`
-    - `module.exports`
-- `path`
-  - `path.basename`
-  - `path.join`
-- `util`
-  - `util.log`
-  - `util.inherits`
-- `readline`
-  - `rl = readline.createInterface`
-  - `rl.question`
-  - `rl.setPrompt`
-  - `rl.prompt`
-  - `rl.close`
-  - `rl.on('line',fn)`
-  - `rl.on('close',fn)`
-- `events`
-  - `e = ('events').EventEmitter`
-  - `e.emit`
-  - `e.on`
-- `child_process`
-  - `exec`
-  - `spawn`
-    - `spawn.on`
-    - `spawn.stdout.on`
-    - `spawn.stdin.write`
-- `fs`
-  - `fs.readdirSync`
-  - `fs.readdir`
-  - `fs.createReadStream`
-  - `fs.createWriteStream`
-
 ### Testing
 - In Node.js, you can test source codes by installing mocha & chai. And, to do testing of values, you could use either `assert`, `should` or `expect`.
 - `describe` is used to write the suite of tests. You can nest `describe` as needed.
@@ -184,4 +148,5 @@ Because you can use node modules to break down programs into smaller chunks and 
 - `node --inspect-brk ./node_modules/.bin/gulp css`
 
   **Reference**
+  
   - https://stackoverflow.com/questions/40033298/how-to-debug-a-gulp-task

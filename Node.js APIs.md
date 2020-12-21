@@ -1,0 +1,41 @@
+### Commonly used APIs of Node.js
+
+- `globals`
+  - `__filename`
+  - `__dirname`
+  - `process`
+    - `process.argv`
+    - `process.stdin.on`
+    - `process.stdout.write`
+    - `process.exit`
+  - `module`
+    - `module.exports`
+- `path`
+  - `path.basename`
+  - `path.join`
+- `util`
+  - `util.log`
+  - `util.inherits`
+- `readline`
+  - `rl = readline.createInterface`
+  - `rl.question`
+  - `rl.setPrompt`
+  - `rl.prompt`
+  - `rl.close`
+  - `rl.on('line',fn)`
+  - `rl.on('close',fn)`
+- `events`
+  - `e = ('events').EventEmitter`
+  - `e.emit`
+  - `e.on`
+- `child_process`
+  - `exec`
+  - `spawn`
+    - `spawn.on`
+    - `spawn.stdout.on`
+    - `spawn.stdin.write`
+- `fs`
+  - `fs.readdirSync`
+  - `fs.readdir`
+  - `fs.createReadStream`
+  - `fs.createWriteStream`
