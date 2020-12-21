@@ -1,7 +1,3 @@
-[toc]
-
-
-
 ## npm
 
 **npm semantic version rules**
